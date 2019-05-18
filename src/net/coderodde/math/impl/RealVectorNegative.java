@@ -9,7 +9,8 @@ import net.coderodde.math.Vector;
  * @author Rodion "rodde" Efremov
  * @version 1.6 (May 17, 2019)
  */
-public final class RealVectorNegative implements Negative<Vector<Double>> {
+public final class RealVectorNegative implements Negative<Vector<Double>,
+                                                          Vector<Double>> {
 
     /**
      * {@inheritDoc }

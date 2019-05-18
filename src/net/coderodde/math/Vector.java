@@ -68,7 +68,7 @@ public final class Vector<E> {
     
     @Override
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder("[");
+        StringBuilder stringBuilder = new StringBuilder("<");
         String separator = "";
         
         for (E component : components) {
@@ -76,7 +76,7 @@ public final class Vector<E> {
             separator = ", ";
             stringBuilder.append(component);
         }
-        return stringBuilder.append("]").toString();
+        return stringBuilder.append(">").toString();
     }
     
     @Override

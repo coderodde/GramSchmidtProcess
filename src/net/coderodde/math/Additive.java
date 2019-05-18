@@ -6,7 +6,7 @@ package net.coderodde.math;
  * @author Rodion "rodde" Efremov
  * @version 1.6 (May 17, 2019)
  */
-public interface Additive<E> {
+public interface Additive<I1, I2, O> {
     
     /**
      * This method adds {@code a} and {@code b} and returns the sum.
@@ -15,5 +15,5 @@ public interface Additive<E> {
      * @param b the second element.
      * @return the sum of the two given numbers.
      */
-    public E add(E a, E b);
+    public O add(I1 a, I2 b);
 }

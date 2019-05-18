@@ -28,7 +28,7 @@ public class GramSchmidtProcess<VCT, IPT, FT> {
     /**
      * This object is responsible for computing division.
      */
-    private Divisible<IPT, FT> divisible;
+    private Divisible<IPT, IPT, FT> divisible;
     
     /**
      * This object is responsible for computing products (multiplication).
@@ -38,12 +38,12 @@ public class GramSchmidtProcess<VCT, IPT, FT> {
     /**
      * This object is responsible for computing addition.
      */
-    private Additive<Vector<VCT>> additive;
+    private Additive<Vector<VCT>, Vector<VCT>, Vector<VCT>> additive;
     
     /**
      * This object is responsible for computing negative elements.
      */
-    private Negative<Vector<VCT>> negative;
+    private Negative<Vector<VCT>, Vector<VCT>> negative;
     
     /**
      * Constructs the object with the method for running Gram-Schmidt process 
@@ -56,10 +56,12 @@ public class GramSchmidtProcess<VCT, IPT, FT> {
      * @param negative     the object for computing inverses.
      */
     public GramSchmidtProcess(InnerProduct<VCT, IPT> innerProduct,
-                              Divisible<IPT, FT> divisible,
+                              Divisible<IPT, IPT, FT> divisible,
                               Product<FT, Vector<VCT>, Vector<VCT>> product,
-                              Additive<Vector<VCT>> additive,
-                              Negative<Vector<VCT>> negative) {
+                              Additive<Vector<VCT>,
+                                       Vector<VCT>,
+                                       Vector<VCT>> additive,
+                              Negative<Vector<VCT>, Vector<VCT>> negative) {
         this.innerProduct = 
                 Objects.requireNonNull(
                         innerProduct,
@@ -101,7 +103,7 @@ public class GramSchmidtProcess<VCT, IPT, FT> {
             for (int j = 0; j < i; j++) {
                 // Take the inner product of the divident:
                 IPT innerProductDivident = 
-                        this.innerProduct.innerProductOf(x, basis[j]);
+                        this.innerProduct.innerProductOf(x, orthogonalBasis[j]);
                 
                 // Take the inner product of the divisor:
                 IPT innerProductDivisor = 
@@ -126,6 +128,7 @@ public class GramSchmidtProcess<VCT, IPT, FT> {
             orthogonalBasis[i] = x;
         }
         
+        // Remove the duplicates and return whatever is left:
         return removeDuplicates(orthogonalBasis);
     }
     
