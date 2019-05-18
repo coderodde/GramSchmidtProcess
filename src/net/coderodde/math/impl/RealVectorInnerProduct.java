@@ -11,10 +11,15 @@ import net.coderodde.math.Vector;
  * @version 1.6 (May 17, 2019)
  */
 public final class RealVectorInnerProduct 
-        implements InnerProduct<Double, Double> {
+        implements InnerProduct<Double, Double, Double> {
 
     /**
-     * {@inheritDoc }
+     * Computes and returns the inner product of the vectors {@code a} and 
+     * {@code b}.
+     * 
+     * @param a the left operand vector.
+     * @param b the right operand vector.
+     * @return the inner product of the vectors {@code a} and {@code b}.
      */
     @Override
     public Double innerProductOf(Vector<Double> a, Vector<Double> b) {

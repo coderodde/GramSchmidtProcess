@@ -15,11 +15,11 @@ public final class ComplexVectorNegative
 
     /**
      * Negates every component in {@code element} and returns the resulting 
-     * vector.
+     * vector. The input vector remains intact.
      * 
      * @param element the element to negate.
      * @return the element with all the components negated compared to the 
-     *         input 
+     *         input vector. 
      */
     @Override
     public Vector<ComplexNumber> negate(Vector<ComplexNumber> element) {

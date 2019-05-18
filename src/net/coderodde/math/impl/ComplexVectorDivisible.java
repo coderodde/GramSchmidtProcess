@@ -14,7 +14,7 @@ public final class ComplexVectorDivisible implements Divisible<ComplexNumber,
 
     /**
      * Divides the complex {@code divident} by the complex {@code divisor} and 
-     * returns the fraction.
+     * returns the fraction. Both the input complex numbers remain intact.
      * 
      * @param divident the complex divident.
      * @param divisor  the complex divisor.
@@ -22,6 +22,7 @@ public final class ComplexVectorDivisible implements Divisible<ComplexNumber,
      */
     @Override
     public ComplexNumber divide(ComplexNumber divident, ComplexNumber divisor) {
+        // TODO: could do Karatsuba multiplication here, I guess.
         double a = divident.getRealPart();
         double b = divident.getImaginaryPart();
         double c = divisor.getRealPart();

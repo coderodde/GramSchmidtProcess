@@ -4,7 +4,7 @@ import net.coderodde.math.Additive;
 import net.coderodde.math.Vector;
 
 /**
- * This class implements addition over {@code double}-valued elements of an
+ * This class implements addition over {@code double}-valued vectors of an
  * Euclidean space.
  * 
  * @author Rodion "rodde" Efremov 

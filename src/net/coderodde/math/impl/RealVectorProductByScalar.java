@@ -13,7 +13,13 @@ public final class RealVectorProductByScalar
         implements Product<Double, Vector<Double>, Vector<Double>> {
 
     /**
-     * {@inheritDoc }.
+     * This method multiplies the input vector {@code vector} component-wise by
+     * the {@code double} scalar and returns the result. The input vector 
+     * remains intact.
+     * 
+     * @param scalar the scalar.
+     * @param vector the vector to multiply by the scalar.
+     * @return the input vector multiplied by the input scalar.
      */
     @Override
     public Vector<Double> multiply(Double scalar, Vector<Double> vector) {

@@ -13,11 +13,14 @@ public final class RealVectorNegative implements Negative<Vector<Double>,
                                                           Vector<Double>> {
 
     /**
-     * {@inheritDoc }
+     * Negates the input {@code double} vector. The input vector remains intact.
+     * 
+     * @param a the {@code double} vector to negate.
+     * @return the negative of {@code a}.
      */
     @Override
-    public Vector<Double> negate(Vector<Double> element) {
-        Vector<Double> result = new Vector<>(element);
+    public Vector<Double> negate(Vector<Double> a) {
+        Vector<Double> result = new Vector<>(a);
         
         for (int i = 0; i < result.getNumberOfDimensions(); i++) {
             result.set(i, -result.get(i));

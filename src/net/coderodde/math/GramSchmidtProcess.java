@@ -23,7 +23,7 @@ public class GramSchmidtProcess<VCT, IPT, FT> {
      * This object is responsible for computing the inner product of two 
      * vectors.
      */
-    private InnerProduct<VCT, IPT> innerProduct;
+    private InnerProduct<VCT, VCT, IPT> innerProduct;
     
     /**
      * This object is responsible for computing division.
@@ -55,7 +55,7 @@ public class GramSchmidtProcess<VCT, IPT, FT> {
      * @param additive     the object for performing addition.
      * @param negative     the object for computing inverses.
      */
-    public GramSchmidtProcess(InnerProduct<VCT, IPT> innerProduct,
+    public GramSchmidtProcess(InnerProduct<VCT, VCT, IPT> innerProduct,
                               Divisible<IPT, IPT, FT> divisible,
                               Product<FT, Vector<VCT>, Vector<VCT>> product,
                               Additive<Vector<VCT>,

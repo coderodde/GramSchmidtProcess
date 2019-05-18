@@ -10,8 +10,16 @@ import net.coderodde.math.Vector;
  * @version 1.6 (May 18, 2019)
  */
 public final class ComplexVectorInnerProduct 
-        implements InnerProduct<ComplexNumber, ComplexNumber> {
+        implements InnerProduct<ComplexNumber, ComplexNumber, ComplexNumber> {
 
+    /**
+     * Computes the inner product of {@code a} and {@code b} and returns it to
+     * the caller.
+     * 
+     * @param a the first operand.
+     * @param b the second operand.
+     * @return the inner product.
+     */
     @Override
     public ComplexNumber innerProductOf(Vector<ComplexNumber> a,//1 -2i
                                         Vector<ComplexNumber> b) {//1 -2i

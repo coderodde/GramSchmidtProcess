@@ -3,6 +3,10 @@ package net.coderodde.math;
 /**
  * This interface defines the API for adding the two elements.
  * 
+ * @param <I1> the type of the left operand.
+ * @param <I2> the type of the right operand.
+ * @param <O>  the sum type.
+ * 
  * @author Rodion "rodde" Efremov
  * @version 1.6 (May 17, 2019)
  */

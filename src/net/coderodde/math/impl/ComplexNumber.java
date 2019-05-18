@@ -1,14 +1,34 @@
 package net.coderodde.math.impl;
 
 /**
- *
- * @author rodde
+ * This class implements a complex number. The complex number consists of a real
+ * part and an imaginary part. The imaginary part is a real number equipped with
+ * the imaginary unit {@code i}, for which {@code i^2 = -1}. This class is
+ * immutable.
+ * 
+ * @author Rodion "rodde" Efremov
+ * @version 1.6 (May 18, 2019)
  */
 public final class ComplexNumber {
     
+    /**
+     * The real number.
+     */
     private final double realPart;
+    
+    /**
+     * The imaginary number.
+     */
     private final double imaginaryPart;
     
+    /**
+     * Constructs a new complex number.
+     * 
+     * @param realPart      the real part of the newly constructed complex 
+     *                      number.
+     * @param imaginaryPart the imaginary part of the newly constructed complex
+     *                      number.
+     */
     public ComplexNumber(final double realPart, final double imaginaryPart) {
         checkNotNan(realPart);
         checkNotNan(imaginaryPart);
@@ -18,10 +38,20 @@ public final class ComplexNumber {
         this.imaginaryPart = imaginaryPart;
     }
     
+    /**
+     * Returns the real part of this complex number.
+     * 
+     * @return the real part of this complex number.
+     */
     public double getRealPart() {
         return realPart;
     }
     
+    /**
+     * Returns the imaginary part of this complex number.
+     * 
+     * @return the imaginary part of this complex number.
+     */
     public double getImaginaryPart() {
         return imaginaryPart;
     }
@@ -65,6 +95,11 @@ public final class ComplexNumber {
         return new ComplexNumber(resultRealPart, resultImaginaryPart);
     }
     
+    /**
+     * Returns a simple textual representation of this complex number.
+     * 
+     * @return the textual representation of this complex number.
+     */
     @Override
     public String toString() {
         if (realPart == 0.0 && imaginaryPart == 0.0) {
@@ -86,12 +121,24 @@ public final class ComplexNumber {
         return realPart + " + " + imaginaryPart + "i";
     }
     
+    /**
+     * Checks that the input {@code double} value is not {@code NaN}.
+     * 
+     * @param d the value to check.
+     * @throws IllegalArgumentException in case {@code d} is {@code NaN}.
+     */
     private void checkNotNan(double d) {
         if (Double.isNaN(d)) {
             throw new IllegalArgumentException("NaN");
         }
     }
     
+    /**
+     * Checks that the input {@code double} value is finite.
+     * 
+     * @param d the value to check.
+     * @throws IllegalArgumentException in case {@code d} is not finite.
+     */
     private void checkNotInfinite(double d) {
         if (Double.isInfinite(d)) {
             throw new IllegalArgumentException("Infinite");
