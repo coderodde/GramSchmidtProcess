@@ -69,8 +69,5 @@ public class GramSchmidtProcessTest {
         Vector<Double> v3 = new Vector<>(3., 2., 3.);
         Vector<Double>[] orthogonalBasis = process.process(v1, v2, v3);
         assertTrue(Demo.basisIsOrthogonal(orthogonalBasis, 0.001));
-        for (Vector<Double> vec : orthogonalBasis) {
-            System.out.println(vec);
-        }
     }
 }

@@ -28,11 +28,11 @@ public final class ComplexVectorAdditive
                                      Vector<ComplexNumber> b) {
         ComplexNumber[] complexNumbers = 
                 new ComplexNumber[a.getNumberOfDimensions()];
-        
+
         for (int i = 0; i < a.getNumberOfDimensions(); i++) {
             complexNumbers[i] = a.get(i).add(b.get(i));
         }
-        
+
         return new Vector<>(complexNumbers);
     }
 }

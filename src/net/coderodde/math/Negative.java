@@ -10,7 +10,7 @@ package net.coderodde.math;
  * @version 1.6 (May 17, 2019)
  */
 public interface Negative<I, O> {
-    
+
     /**
      * Returns the negative of {@code element}. The negative of {@code a} is 
      * {@code -a} such that {@code a + (-a) = O}, where {@code O} is the zero

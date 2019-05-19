@@ -11,7 +11,7 @@ package net.coderodde.math;
  * @version 1.6 (May 17, 2019)
  */
 public interface Additive<I1, I2, O> {
-    
+
     /**
      * This method adds {@code a} and {@code b} and returns the sum.
      * 

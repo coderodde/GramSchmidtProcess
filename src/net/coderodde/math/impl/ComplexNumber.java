@@ -10,17 +10,17 @@ package net.coderodde.math.impl;
  * @version 1.6 (May 18, 2019)
  */
 public final class ComplexNumber {
-    
+
     /**
      * The real number.
      */
     private final double realPart;
-    
+
     /**
      * The imaginary number.
      */
     private final double imaginaryPart;
-    
+
     /**
      * Constructs a new complex number.
      * 
@@ -37,7 +37,7 @@ public final class ComplexNumber {
         this.realPart = realPart;
         this.imaginaryPart = imaginaryPart;
     }
-    
+
     /**
      * Returns the real part of this complex number.
      * 
@@ -46,7 +46,7 @@ public final class ComplexNumber {
     public double getRealPart() {
         return realPart;
     }
-    
+
     /**
      * Returns the imaginary part of this complex number.
      * 
@@ -55,7 +55,7 @@ public final class ComplexNumber {
     public double getImaginaryPart() {
         return imaginaryPart;
     }
-    
+
     /**
      * Returns the complex number that is equal to the sum of this complex 
      * number and the {@code other} complex number.
@@ -67,7 +67,7 @@ public final class ComplexNumber {
         return new ComplexNumber(realPart + other.realPart, 
                                  imaginaryPart + other.imaginaryPart);
     }
-    
+
     /**
      * Returns the negative of this complex number.
      * 
@@ -76,7 +76,7 @@ public final class ComplexNumber {
     public ComplexNumber negate() {
         return new ComplexNumber(-realPart, -imaginaryPart);
     }
-    
+
     /**
      * Returns the complex number representing the product of the two input 
      * complex numbers.
@@ -94,7 +94,7 @@ public final class ComplexNumber {
         double resultImaginaryPart = a * d + b * c;
         return new ComplexNumber(resultRealPart, resultImaginaryPart);
     }
-    
+
     /**
      * Returns a simple textual representation of this complex number.
      * 
@@ -105,22 +105,22 @@ public final class ComplexNumber {
         if (realPart == 0.0 && imaginaryPart == 0.0) {
             return "0.0";
         }
-        
+
         if (realPart == 0.0) {
             return imaginaryPart + "i";
         }
-        
+
         if (imaginaryPart == 0.0) {
             return Double.toString(realPart);
         }
-        
+
         if (imaginaryPart < 0.0) {
             return realPart + " - " + Math.abs(imaginaryPart) + "i";
         }
-        
+
         return realPart + " + " + imaginaryPart + "i";
     }
-    
+
     /**
      * Checks that the input {@code double} value is not {@code NaN}.
      * 
@@ -132,7 +132,7 @@ public final class ComplexNumber {
             throw new IllegalArgumentException("NaN");
         }
     }
-    
+
     /**
      * Checks that the input {@code double} value is finite.
      * 

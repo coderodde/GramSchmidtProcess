@@ -25,11 +25,11 @@ public final class RealVectorAdditive implements Additive<Vector<Double>,
     @Override
     public Vector<Double> add(Vector<Double> a, Vector<Double> b) {
         Vector<Double> result = new Vector<>(a);
-        
+
         for (int i = 0; i < a.getNumberOfDimensions(); i++) {
             result.set(i, result.get(i) + b.get(i));
         }
-        
+
         return result;
     }
 }

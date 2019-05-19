@@ -26,11 +26,11 @@ public final class ComplexVectorProductByScalar
     public Vector<ComplexNumber> multiply(ComplexNumber scalar, 
                                           Vector<ComplexNumber> vector) {
         Vector<ComplexNumber> ret = new Vector<>(vector);
-        
+
         for (int i = 0; i < vector.getNumberOfDimensions(); i++) {
             ret.set(i, ret.get(i).multiply(scalar));
         }
-        
+
         return ret;
     }
 }

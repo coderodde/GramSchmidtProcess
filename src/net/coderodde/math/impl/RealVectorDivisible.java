@@ -10,7 +10,7 @@ import net.coderodde.math.Divisible;
  */
 public final class RealVectorDivisible 
         implements Divisible<Double, Double, Double> {
-    
+
     /**
      * Returns the fraction of {@code divident} and {@code divisor}.
      * 

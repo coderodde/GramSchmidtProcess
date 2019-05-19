@@ -12,7 +12,7 @@ package net.coderodde.math;
  * @version 1.6 (May 17, 2019)
  */
 public interface InnerProduct<VCT1, VCT2, IPT> {
-    
+
     /**
      * Computes the inner product of the two given vectors.
      * 

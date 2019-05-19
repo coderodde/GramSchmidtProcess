@@ -10,12 +10,12 @@ import java.util.Objects;
  * @version 1.6 (May 17, 2019)
  */
 public final class Vector<E> {
-    
+
     /**
      * The actual vector contents.
      */
     private final E[] components;
-    
+
     /**
      * Constructs the vector from the given data.
      * 
@@ -25,7 +25,7 @@ public final class Vector<E> {
         Objects.requireNonNull(components, "The input vector is null.");
         this.components = Arrays.copyOf(components, components.length);
     }
-    
+
     /**
      * Copy-constructs this vector.
      * 
@@ -35,7 +35,7 @@ public final class Vector<E> {
         this.components = Arrays.copyOf(vector.components, 
                                         vector.components.length);
     }
-    
+
     /**
      * Returns the {@code index}th component of this vector.
      * 
@@ -45,7 +45,7 @@ public final class Vector<E> {
     public E get(int index) {
         return components[index];
     }
-    
+
     /**
      * Sets the value of the {@code index}th vector component to the given 
      * value. 
@@ -56,7 +56,7 @@ public final class Vector<E> {
     public void set(int index, E value) {
         components[index] = value;
     }
-    
+
     /**
      * Returns the number of components in this vector.
      * 
@@ -65,12 +65,12 @@ public final class Vector<E> {
     public int getNumberOfDimensions() {
         return components.length;
     }
-    
+
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder("<");
         String separator = "";
-        
+
         for (E component : components) {
             stringBuilder.append(separator);
             separator = ", ";
@@ -78,26 +78,26 @@ public final class Vector<E> {
         }
         return stringBuilder.append(">").toString();
     }
-    
+
     @Override
     public int hashCode() {
         return Arrays.hashCode(components);
     }
-    
+
     @Override
     public boolean equals(Object o) {
         if (o == null) {
             return false;
         }
-        
+
         if (o == this) {
             return true;
         }
-        
+
         if (!o.getClass().equals(this.getClass())) {
             return false;
         }
-        
+
         Vector<E> other = (Vector<E>) o;
         return Arrays.equals(components, other.components);
     }

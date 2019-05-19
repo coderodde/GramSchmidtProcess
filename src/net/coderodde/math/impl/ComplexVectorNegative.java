@@ -24,11 +24,11 @@ public final class ComplexVectorNegative
     @Override
     public Vector<ComplexNumber> negate(Vector<ComplexNumber> element) {
         Vector<ComplexNumber> result = new Vector<>(element);
-        
+
         for (int i = 0; i < element.getNumberOfDimensions(); i++) {
             result.set(i, result.get(i).negate());
         }
-        
+
         return result;
     }
 }

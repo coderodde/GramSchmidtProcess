@@ -24,14 +24,14 @@ public final class ComplexVectorInnerProduct
     public ComplexNumber innerProductOf(Vector<ComplexNumber> a,//1 -2i
                                         Vector<ComplexNumber> b) {//1 -2i
         ComplexNumber innerProduct = new ComplexNumber(0.0, 0.0);
-        
+
         for (int i = 0; i < a.getNumberOfDimensions(); i++) {
             ComplexNumber complexNumber1 = a.get(i);
             ComplexNumber complexNumber2 = b.get(i);
             ComplexNumber product = complexNumber1.multiply(complexNumber2);
             innerProduct = innerProduct.add(product);
         }
-        
+
         return innerProduct;
     }
 }

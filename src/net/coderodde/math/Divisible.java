@@ -11,7 +11,7 @@ package net.coderodde.math;
  * @version 1.6 (May 17, 2019)
  */
 public interface Divisible<D1, D2, F> {
-    
+
     /**
      * Divides {@code a} by {@code b} and returns the result.
      * 

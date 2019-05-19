@@ -27,10 +27,10 @@ public final class ComplexVectorDivisible implements Divisible<ComplexNumber,
         double b = divident.getImaginaryPart();
         double c = divisor.getRealPart();
         double d = divisor.getImaginaryPart();
-        
+
         double resultRealPart = (a * c + b * d) / (c * c + d * d);
         double resultImaginaryPart = (b * c - a * d) / (c * c + d * d);
-        
+
         return new ComplexNumber(resultRealPart, resultImaginaryPart);
     }
 }
